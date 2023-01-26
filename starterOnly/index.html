@@ -70,7 +70,6 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
                 /><br>
               </div>
               <div
@@ -101,6 +100,7 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
+                  max="2009-12-31"
                 /><br>
               </div>
               <div
@@ -117,6 +117,7 @@
                   id="location1"
                   name="location"
                   value="New York"
+                  checked="checked"
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
@@ -186,8 +187,10 @@
                   type="checkbox"
                   id="checkbox1"
                   checked
+                  {# validation requise #}
+                  required
                 />
-                <label class="checkbox2-label" for="checkbox1" required>
+                <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -199,6 +202,8 @@
                 </label>
                 <br>
               </div>
+              <!--error message container-->
+              <p class="error-message"></p>
               <input
                 class="btn-submit"
                 type="submit"
