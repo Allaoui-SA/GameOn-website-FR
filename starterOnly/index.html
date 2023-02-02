@@ -54,13 +54,16 @@
 
       <div class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span class="close close-modal"></span>
           <div class="modal-body">
+            <div class="confirmation-container">
+              <p>Merci pour votre inscription</p>
+              <button onclick="validate()" class="btn-confirm close-modal">Fermer</button>
+            </div>
             <form
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
             >
               <div
                 class="formData">
@@ -71,6 +74,8 @@
                   id="first"
                   name="first"
                 /><br>
+                <!--error message container-->
+                <p id="error-firstname" class="error-message"></p>
               </div>
               <div
                 class="formData">
@@ -81,6 +86,8 @@
                   id="last"
                   name="last"
                 /><br>
+                <!--error message container-->
+                <p id="error-lastname" class="error-message"></p>
               </div>
               <div
                 class="formData">
@@ -91,6 +98,8 @@
                   id="email"
                   name="email"
                 /><br>
+                <!--error message container-->
+                <p id="error-email" class="error-message"></p>
               </div>
               <div
                 class="formData">
@@ -102,6 +111,8 @@
                   name="birthdate"
                   max="2009-12-31"
                 /><br>
+                <!--error message container-->
+                <p id="error-birthdate" class="error-message"></p>
               </div>
               <div
                 class="formData">
@@ -203,7 +214,7 @@
                 <br>
               </div>
               <!--error message container-->
-              <p class="error-message"></p>
+              <p id="error-terms" class="error-message"></p>
               <input
                 class="btn-submit"
                 type="submit"

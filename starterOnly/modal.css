@@ -186,6 +186,7 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+  position: relative;
 }
 
 label {
@@ -300,6 +301,7 @@ input[data-error]::after {
   position: absolute;
   right: 15px;
   top: 15px;
+  z-index: 3;
   width: 32px;
   height: 32px;
   opacity: 1;
@@ -322,7 +324,7 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup, .btn-confirm {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -479,8 +481,31 @@ footer {
   margin: 0 20px;
 }
 
+/* confirmation popup */
+.confirmation-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  background: #232323;
+}
+
+/* confirmation popup button*/
+.btn-confirm {
+  position: absolute;
+  bottom: 50px;
+}
+
+/* styling error message */
 .error-message {
-  margin: 5px 0 10px 0;
+  margin-bottom: 5px;
   color: salmon;
   font-weight: normal;
   font-size: 14px;
